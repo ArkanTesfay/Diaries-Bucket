@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+
+.sbt-btn{
+	margin-top: 10px;
+}

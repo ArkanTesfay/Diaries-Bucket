@@ -5,5 +5,11 @@ Rails.application.routes.draw do
 
 
   root "welcome#home"
-  
+
+  get "new", to: "diaries#new"
+  post "new", to: "diaries#create"
+
+  get "my_diaries", to:"diaries#index"
+
+
 end
