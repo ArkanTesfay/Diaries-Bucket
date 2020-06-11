@@ -1,8 +1,23 @@
-<div class="container">
-	<section class="jumbotron text-center">
+
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>SailSpeed</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzlTdLEkKgAS_3EiCVUAaUJkMjBCnK3io&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./app.js"></script>
+  </head>
+  <body>
     <div class="container">
-      <h1>Diaries-Bucket</h1>
-      <p class="lead text-muted">The Fastest and easiest Diaries writing platform.</p>
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>SailSpeed</h1>
+      <p class="lead text-muted">Fast, Secure and Reliable way to Post anything without compromising your security</p>
       <p>
         <%= link_to "Sign-Up", new_account_registration_path, class: "btn btn-primary my-2"  %>
         <%= link_to "Sign-In", new_account_session_path, class: "btn btn-primary my-2"  %>
@@ -10,4 +25,8 @@
       </p>
     </div>
   </section>
-</div>
+
+ 
+    
+  </body>
+</html>

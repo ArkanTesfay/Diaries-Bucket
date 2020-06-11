@@ -1,16 +1,26 @@
 <div class="container">
-	<h3 align="center">Create New Diarie</h3>
+	<h3 align="center"> New Post</h3>
 
-	<%= form_for( :diaries , :html => {:class => "form-horizontal", :role => "form"}, url: new_path)do |f| %>
+  <% if @diary.errors.any? %>
+
+      <%= @diary.errors.full_messages %>
+
+  <% end %>
+ 
 
 
-	 <div class="form-group">
+ 
+
+	<%= form_with scope: :diarie, url: diaries_path, local: true do |f| %>
+
+
+	<div class="form-group">
     <label >Title</label>
-    <%= f.text_field :title, class: "form-control", placeholder:"Give your Diarie a meaningfull title" %>
+  <%= f.text_field :title, class: "form-control", placeholder:"Post Title"%>
     <label>Body</label>
-  	<%= f.text_area :body, size: "60x12" , class: "form-control" , placeholder:"Type anything here" %>
+  <%= f.text_area :body, size: "60x12" , class: "form-control" , placeholder:"Type anything here" %>
   	<%= f.submit "Create", class: " sbt-btn btn btn-success" %>
-  	</div>
+  </div>
 
 	<% end %>
 	

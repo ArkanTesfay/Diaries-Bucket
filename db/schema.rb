@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_27_052842) do
+ActiveRecord::Schema.define(version: 2020_06_08_205058) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2020_05_27_052842) do
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "account_id"
+    t.index ["account_id"], name: "index_diaries_on_account_id"
   end
 
 end
